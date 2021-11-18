@@ -1,0 +1,76 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;;
+}
+body {
+    margin: 0;
+    max-width: 100%;
+}
+form {
+    padding-block: 1em;
+    padding-inline: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: rgb(219, 214, 209);
+}
+
+form * {
+    flex-basis: 50%;
+    margin-block: 1em;
+}
+
+#submit-btn {
+    margin-block: 1em;
+    flex-basis: 100%;
+    font-size: 1rem;
+    font-weight: bolder;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: springgreen;
+}
+
+#submit-btn:hover {
+    cursor: pointer;
+}
+
+/**/
+
+.medicine {
+    background-color: rgb(219, 214, 209);
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.delete-btn {
+    font-size: 1rem;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding-inline: 1em;
+    padding-block: .5em;
+}
+.delete-btn:hover {
+    cursor: pointer;
+    background-color: rgb(104, 1, 1);
+}
+
+.medicine_amount {
+    flex-basis: 100%;
+    display: flex;
+}
+.amount-btn {
+    flex-basis: 100%;
+    height: 5vh;
+}
+.amount-btn:hover {
+    cursor: pointer;
+}
+
+.amount-done {
+    background-color: rgb(104, 1, 1);
+    border: 1px solid black;
+}
