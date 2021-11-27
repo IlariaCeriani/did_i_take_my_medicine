@@ -1,1 +1,1 @@
-# Did I take my medicines?.
+# Did I take my medicines?
