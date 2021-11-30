@@ -9,8 +9,12 @@ submit.addEventListener('click', () => {
     const medAmount = document.getElementById('quantita').value;
 
     medArr.push({ name : `${medName}`, amount : `${medAmount}`});
+    
+})
 
-    let txtArr = medArr.map((item) => {
+document.addEventListener('click', (e) => {
+//    if (submit.contains(e.target) && medArr!==[]) {
+       let txtArr = medArr.map((item) => {
         
         function amountNum(num) {
             let amountNum = [];
@@ -30,29 +34,34 @@ submit.addEventListener('click', () => {
 
 
     container.innerHTML = txtArr;
+   
 
-    
    const deleteBtn = document.querySelectorAll('.delete-btn');
-    const amountBtn = document.querySelectorAll('.amount-btn');
+   const amountBtn = document.querySelectorAll('.amount-btn');
+   console.log(amountBtn);
       
-    amountBtn.forEach((btn) => {
-        btn.addEventListener('click', () => {
-            btn.classList.toggle('amount-done');
-        })
-    });
-    
-    deleteBtn.forEach((btn) => {
-        btn.addEventListener('click', (e) => {
-           let dataset = e.currentTarget.dataset.id;
-           let index = medArr.map(function(e) { return e.name; }).indexOf(`${dataset}`);
-           medArr.splice(index, 1);
-
+   amountBtn.forEach((btn) => {
+       btn.addEventListener('click', () => {
+           btn.classList.toggle('amount-done');
         })
     })
- 
+   
     
+  deleteBtn.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+        let dataset = e.currentTarget.dataset.id;
+        let index = medArr.map(function(e) { return e.name; }).indexOf(`${dataset}`);
+        medArr.splice(index, 1);
+
+    })
+  })
+
+
 })
 
+
+
+    
 
 
 
