@@ -35,23 +35,26 @@ function createListMed(name, amount) {
     attr.value = name;
     element.setAttributeNode(attr);
     element.innerHTML = `<h2 class="medicine_name">${name}</h2>
-             <button class="delete-btn" type="button" data-id="${name}">X</button>
-             <div class="medicine_amount">
-                 ${amountNum()}
-             </div>`;
+    <button class="delete-btn" type="button" data-id="${name}">X</button>
+    <div class="medicine_amount">
+    ${amountNum()}
+    </div>`;
 
-    container.appendChild(element);
-
-    const deleteBtn = document.querySelector('.delete-btn');
-    const amountBtn = document.querySelectorAll('.amount-btn');
+   const deleteBtn = element.querySelector('.delete-btn');
+    const amountBtn = element.querySelectorAll('.amount-btn');
 
     deleteBtn.addEventListener('click', deleteItem);
     amountBtn.forEach((btn) => {
         btn.addEventListener('click', (e) => {
             e.currentTarget.classList.toggle('amount-done');
+            
         })
     })
-
+    
+             
+             
+    
+    container.appendChild(element);
 
 
     
